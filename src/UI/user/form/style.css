@@ -1,0 +1,30 @@
+.buttons {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #426FC5;
+}
+
+.buttons:hover {
+    -fx-background-color: #426FC5;
+    -fx-text-fill: #ffffff;
+}
+
+.reset-button {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #D50000;
+    -fx-text-fill: #D50000;
+}
+
+.reset-button:hover {
+    -fx-background-color: #D50000;
+    -fx-text-fill: #ffffff;
+}
+
+.jfx-text-field:error, .jfx-password-field:error, .jfx-text-area:error{
+	-jfx-focus-color: #D34336;
+	-jfx-unfocus-color: #D34336;
+}
+
+.jfx-text-field .error-label, .jfx-password-field .error-label , .jfx-text-area .error-label{
+	-fx-text-fill : #D34336;
+	-fx-font-size: 1.0em;
+}
