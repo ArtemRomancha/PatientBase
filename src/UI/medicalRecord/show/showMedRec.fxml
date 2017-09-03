@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #ffffff;" stylesheets="@../../patient/style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.medicalRecord.show.ShowMedRecController">
+   <children>
+      <VBox layoutX="150.0" spacing="25.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="34.0" prefWidth="300.0">
+               <children>
+                  <Label fx:id="titleLB" text="Медецинская запись" textFill="#2196f3">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <JFXTextField fx:id="surgeonTB" editable="false" focusTraversable="false" labelFloat="true" promptText="Хирург" />
+            <JFXTextField fx:id="anaesthesiologistTB" editable="false" focusTraversable="false" labelFloat="true" promptText="Анестезиолог" />
+            <JFXTextField fx:id="doctorTB" editable="false" focusTraversable="false" labelFloat="true" promptText="Лечащий врач" />
+            <JFXTextField fx:id="diagnosisTB" editable="false" focusTraversable="false" labelFloat="true" promptText="Диагноз" />
+            <JFXTextArea fx:id="noticeTA" editable="false" focusTraversable="false" labelFloat="true" prefHeight="0.0" prefWidth="500.0" promptText="Примечание" wrapText="true" />
+            <VBox>
+               <children>
+                  <Label prefHeight="2.0" text="Вложения" textFill="#2196f3">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" focusTraversable="false" hbarPolicy="NEVER" pickOnBounds="false" prefHeight="200.0" prefWidth="500.0">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                     <content>
+                        <AnchorPane prefHeight="195.0" prefWidth="498.0">
+                           <children>
+                              <VBox fx:id="contentPane" prefHeight="195.0" prefWidth="498.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <JFXButton fx:id="closeBT" focusTraversable="false" onAction="#closeBTOnAction" prefHeight="40.0" prefWidth="130.0" text="Закрыть" />
+               </children></HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
