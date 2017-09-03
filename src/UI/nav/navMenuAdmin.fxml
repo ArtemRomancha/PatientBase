@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="rootBox" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="200.0" spacing="5.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.nav.NavController">
+   <children>
+      <ImageView fitHeight="113.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/img/splash.jpg" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="-0.31" contrast="0.15" />
+         </effect>
+      </ImageView>
+      <JFXButton fx:id="patientBT" accessibleText="patient" alignment="BOTTOM_LEFT" focusTraversable="false" prefHeight="63.0" prefWidth="198.0" ripplerFill="WHITE" text="Пациенты" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="patientIMG" fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="surgeonBT" accessibleText="surgeon" alignment="BOTTOM_LEFT" focusTraversable="false" prefHeight="63.0" prefWidth="198.0" ripplerFill="WHITE" text="Хирурги" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="surgeonIMG" fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="anaestBT" accessibleText="anaesthesiologist" alignment="BOTTOM_LEFT" focusTraversable="false" prefHeight="63.0" prefWidth="198.0" ripplerFill="WHITE" text="Анестезиологи" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="anaestIMG" fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="doctorBT" accessibleText="doctor" alignment="BOTTOM_LEFT" focusTraversable="false" prefHeight="63.0" prefWidth="198.0" ripplerFill="WHITE" text="Лечащие врачи" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="doctorIMG" fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="diagnosisBT" accessibleText="mkb10" alignment="BOTTOM_LEFT" focusTraversable="false" prefHeight="63.0" prefWidth="198.0" ripplerFill="WHITE" text="Диагнозы" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="diagnosisIMG" fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="profileBT" accessibleText="profile" alignment="BOTTOM_LEFT" focusTraversable="false" prefHeight="63.0" prefWidth="198.0" ripplerFill="WHITE" text="Профиль" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="profileIMG" fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="closeBT" accessibleText="close" alignment="BOTTOM_LEFT" focusTraversable="false" prefHeight="63.0" prefWidth="198.0" ripplerFill="WHITE" text="Закрыть" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="closeIMG" fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" />
+         </graphic>
+      </JFXButton>
+   </children>
+    <stylesheets>
+        <URL value="@nav.css" />
+    </stylesheets>
+</VBox>
