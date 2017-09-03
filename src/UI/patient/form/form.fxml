@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.patient.form.FormController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="266.0" layoutY="69.0" prefHeight="600.0" prefWidth="300.0" spacing="20.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="34.0" prefWidth="300.0">
+               <children>
+                  <Label fx:id="titleLB" text="Регистрация нового пациента" textFill="#2196f3">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <JFXTextField fx:id="lnameTB" focusTraversable="false" labelFloat="true" onKeyPressed="#lnameTBonKeyPressed" promptText="Фамилия">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXTextField>
+            <HBox spacing="5.0">
+               <children>
+                  <JFXTextField fx:id="nameTB" focusTraversable="false" labelFloat="true" onKeyPressed="#nameTBonKeyPressed" promptText="Имя" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="mnameTB" focusTraversable="false" labelFloat="true" onKeyPressed="#mnameTBKeyPressed" promptText="Отчество" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <HBox spacing="5.0">
+               <children>
+                  <AnchorPane HBox.hgrow="ALWAYS">
+                     <children>
+                        <JFXComboBox fx:id="sexCB" focusTraversable="false" labelFloat="true" onKeyPressed="#sexCBKeyPressed" promptText="Пол" visibleRowCount="2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <items>
+                              <FXCollections fx:factory="observableArrayList">
+                                 <Label>мужчина</Label>
+                                 <Label>женщина</Label>
+                              </FXCollections>
+                           </items>
+                        </JFXComboBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane HBox.hgrow="ALWAYS">
+                     <children>
+                        <JFXDatePicker fx:id="dobDP" defaultColor="#2196f3" focusTraversable="false" onKeyPressed="#dobDPKeyPressed" promptText="Дата рождения" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <JFXTextField fx:id="medRecTB" focusTraversable="false" labelFloat="true" onKeyPressed="#medRecTBKeyPressed" promptText="Номер медецинской карты">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="phoneTB" focusTraversable="false" labelFloat="true" onKeyPressed="#phoneTNKeyPressed" promptText="Номер телефона">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="regionTB" focusTraversable="false" labelFloat="true" onKeyPressed="#regionTBKeyPressed" promptText="Область">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="cityTB" focusTraversable="false" labelFloat="true" onKeyPressed="#cityTBKeyPressed" promptText="Населенный пункт">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="streetTB" focusTraversable="false" labelFloat="true" onKeyPressed="#streetTBKeyPressed" promptText="Улица">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXTextField>
+            <AnchorPane>
+               <children>
+                  <HBox spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <JFXTextField fx:id="houseNumTB" focusTraversable="false" labelFloat="true" onKeyPressed="#houseNumTBKeyPressed" promptText="Номер дома" HBox.hgrow="ALWAYS">
+                           <padding>
+                              <Insets top="20.0" />
+                           </padding>
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="flatNumTB" focusTraversable="false" labelFloat="true" onKeyPressed="#flatNumTBKeyPressed" promptText="Номер квартиры" HBox.hgrow="ALWAYS">
+                           <padding>
+                              <Insets top="20.0" />
+                           </padding>
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <JFXTextArea fx:id="noticeTA" focusTraversable="false" labelFloat="true" onKeyPressed="#noticeTAOnKeyPressed" prefHeight="0.0" prefWidth="300.0" promptText="Примечание" wrapText="true" VBox.vgrow="NEVER" />
+            <HBox alignment="CENTER" spacing="20.0">
+               <children>
+                  <JFXButton fx:id="applyBT" focusTraversable="false" onAction="#applyBTonAction" prefHeight="46.0" prefWidth="117.0" ripplerFill="WHITE" style="-fx-border-color: #2196F3;" styleClass="buttons" text="Добавить" textFill="#2196f3">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

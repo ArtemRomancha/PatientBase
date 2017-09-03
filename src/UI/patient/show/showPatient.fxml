@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #ffffff;" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.patient.show.ShowPatientController">
+   <children>
+      <VBox layoutX="150.0" spacing="25.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="34.0" prefWidth="300.0">
+               <children>
+                  <Label fx:id="titleLB" text="Профиль пациента" textFill="#2196f3">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox spacing="10.0">
+               <children>
+                  <JFXTextField fx:id="lnameTB" editable="false" focusTraversable="false" labelFloat="true" promptText="Фамилия" HBox.hgrow="ALWAYS">
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="nameTB" editable="false" focusTraversable="false" labelFloat="true" promptText="Имя" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="mnameTB" editable="false" focusTraversable="false" labelFloat="true" promptText="Отчество" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <HBox spacing="10.0">
+               <children>
+                  <JFXTextField fx:id="sexTB" editable="false" focusTraversable="false" labelFloat="true" promptText="Пол" HBox.hgrow="ALWAYS" />
+                  <JFXTextField fx:id="dobTB" editable="false" focusTraversable="false" labelFloat="true" promptText="Дата рождения" HBox.hgrow="ALWAYS" />
+                  <JFXTextField fx:id="medRecTB" editable="false" focusTraversable="false" labelFloat="true" promptText="Номер медецинской карты" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox spacing="10.0">
+               <children>
+                  <JFXTextField fx:id="phoneTB" editable="false" focusTraversable="false" labelFloat="true" maxWidth="200.0" promptText="Номер телефона" HBox.hgrow="ALWAYS" />
+                  <JFXTextField fx:id="adresTB" editable="false" focusTraversable="false" labelFloat="true" promptText="Адрес" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <JFXTextArea fx:id="noticeTB" editable="false" focusTraversable="false" labelFloat="true" prefHeight="0.0" prefWidth="500.0" promptText="Примечание" wrapText="true" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <VBox>
+               <children>
+                  <Label prefHeight="2.0" text="Медецинские записи" textFill="#2196f3">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" focusTraversable="false" hbarPolicy="NEVER" pickOnBounds="false" prefHeight="250.0" prefWidth="500.0">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                     <content>
+                        <AnchorPane prefHeight="245.0" prefWidth="498.0">
+                           <children>
+                              <VBox fx:id="contentPane" prefHeight="250.0" prefWidth="498.0" spacing="5.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="100.0" spacing="75.0">
+               <children>
+                  <JFXButton fx:id="editBT" focusTraversable="false" onAction="#editBTOnAction" prefHeight="40.0" prefWidth="130.0" styleClass="edit-button" text="Редактировать" HBox.hgrow="ALWAYS" />
+                  <JFXButton fx:id="closeBT" focusTraversable="false" onAction="#closeBTOnAction" prefHeight="40.0" prefWidth="130.0" text="Закрыть" HBox.hgrow="ALWAYS" />
+               </children></HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
