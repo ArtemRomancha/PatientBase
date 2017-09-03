@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onDragDropped="#rootPaneOnDragDropped" onDragOver="#rootPaneOnDragOver" pickOnBounds="false" prefHeight="616.0" prefWidth="800.0" style="-fx-background-color: #ffffff;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.medicalRecord.MedicalRecordController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="276.0" layoutY="79.0" prefHeight="600.0" prefWidth="300.0" spacing="18.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="34.0" prefWidth="300.0">
+               <children>
+                  <Label fx:id="titleLB" text="Новая медецинская запись" textFill="#2196f3">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="31.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <AnchorPane>
+               <children>
+                  <JFXComboBox fx:id="surgeonCB" focusTraversable="false" labelFloat="true" promptText="Хирург" visibleRowCount="6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane>
+               <children>
+                  <JFXComboBox fx:id="anaesthesiologistCB" focusTraversable="false" labelFloat="true" promptText="Анестезиолог" visibleRowCount="6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane>
+               <children>
+                  <JFXComboBox fx:id="doctorCB" focusTraversable="false" labelFloat="true" promptText="Лечащий врач" visibleRowCount="6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane>
+               <children>
+                  <JFXComboBox fx:id="diagnosisCB" focusTraversable="false" labelFloat="true" promptText="Диагноз" visibleRowCount="6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane>
+               <children>
+                  <JFXDatePicker fx:id="dataDP" defaultColor="#2196f3" focusTraversable="false" promptText="Дата" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <JFXTextArea fx:id="noticeTA" focusTraversable="false" labelFloat="true" prefHeight="14.0" prefWidth="500.0" promptText="Примечание" wrapText="true" />
+            <VBox>
+               <children>
+                  <Label prefHeight="2.0" prefWidth="102.0" text="Вложения" textFill="#2196f3">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="descriptionLB" prefHeight="45.0" prefWidth="464.0" text="Нажмите кнопку прикрепить или перетащите файлы которые хотите прикрепить к записи" textFill="#2196f3" wrapText="true">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <JFXButton fx:id="attachBT" focusTraversable="false" onAction="#attachBTOnAction" prefHeight="6.0" prefWidth="119.0" text="Прикрепить">
+                     <VBox.margin>
+                        <Insets bottom="2.0" right="2.0" top="2.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" focusTraversable="false" hbarPolicy="NEVER" pickOnBounds="false" prefHeight="110.0" prefWidth="500.0">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                     <content>
+                        <AnchorPane prefHeight="105.0" prefWidth="496.0">
+                           <children>
+                              <VBox fx:id="contentPane" prefHeight="105.0" prefWidth="496.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" spacing="25.0">
+               <children>
+                  <JFXButton fx:id="applyBT" focusTraversable="false" onAction="#applyBTonAction" prefHeight="46.0" prefWidth="117.0" ripplerFill="WHITE" style="-fx-border-color: #2196F3;" styleClass="buttons" text="Добавить" textFill="#2196f3">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="closeBT" focusTraversable="false" onAction="#closeBTOnAction" prefHeight="40.0" prefWidth="130.0" style="-fx-border-color: #2196F3;" styleClass="buttons" text="Закрыть" visible="false">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,56 @@
+.scroll-pane {
+    -fx-background: #FFFFFF;
+    -fx-border-color: #FFFFFF;
+}
+
+.button {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #2196F3;
+    -fx-text-fill: #426FC5;
+}
+
+.button:hover {
+    -fx-background-color: #426FC5;
+    -fx-text-fill: #ffffff;
+}
+
+
+.buttons {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #2196F3;
+    -fx-text-fill: #426FC5;
+}
+
+.buttons:hover {
+    -fx-background-color: #426FC5;
+    -fx-text-fill: #ffffff;
+}
+
+.delete-button {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #D50000;
+    -fx-text-fill: #D50000;
+}
+
+.delete-button:hover {
+    -fx-background-color: #D50000;
+    -fx-text-fill: #ffffff;
+}
+
+.jfx-text-field:error, .jfx-password-field:error, .jfx-text-area:error{
+	-jfx-focus-color: #D34336;
+	-jfx-unfocus-color: #D34336;
+}
+
+.jfx-text-field .error-label, .jfx-password-field .error-label , .jfx-text-area .error-label{
+	-fx-text-fill : #D34336;
+	-fx-font-size: 1.0em;
+}
+
+.anchor-pane {
+    -fx-background-color: #FFFFFF;
+}
+
+.anchor-pane:hover {
+    -fx-background-color: #2196F3;
+}
