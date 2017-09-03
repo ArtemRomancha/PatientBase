@@ -1,0 +1,7 @@
+.anchor-pane {
+    -fx-background-color: #FFFFFF;
+}
+
+.anchor-pane:hover {
+    -fx-background-color: #2196F3;
+}
