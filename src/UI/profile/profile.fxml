@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.profile.ProfileController">
+   <children>
+      <VBox alignment="CENTER" layoutX="150.0" layoutY="100.0" maxHeight="300.0" maxWidth="300.0" prefHeight="200.0" prefWidth="300.0" spacing="50.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXTextField fx:id="loginTB" editable="false" focusTraversable="false" labelFloat="true" promptText="Имя пользователя">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="fioTB" editable="false" focusTraversable="false" labelFloat="true" promptText="ФИО">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="changePasswordBT" alignment="BOTTOM_LEFT" onAction="#changePasswordBTonAction" prefHeight="46.0" prefWidth="250.0" styleClass="reset-button" stylesheets="@profile.css" text="Сменить пароль">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="changePasswordIMG" fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

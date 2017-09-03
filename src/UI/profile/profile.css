@@ -1,0 +1,21 @@
+.button {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #2196F3;
+    -fx-text-fill: #2196F3;
+}
+
+.button:hover {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: #ffffff;
+}
+
+.reset-button {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #D50000;
+    -fx-text-fill: #D50000;
+}
+
+.reset-button:hover {
+    -fx-background-color: #D50000;
+    -fx-text-fill: #ffffff;
+}
