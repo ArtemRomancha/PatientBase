@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import java.net.URL?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="diagnosisAP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.diagnosis.DiagnosisController">
+    <children>
+        <JFXTreeTableView fx:id="diagnosisTV" layoutY="48.0" prefHeight="530.0" prefWidth="590.0" styleClass="table" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="70.0">
+            <columnResizePolicy>
+                <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy></JFXTreeTableView>
+      <JFXTextField fx:id="filterTB" focusTraversable="false" labelFloat="true" layoutX="15.0" layoutY="24.0" prefHeight="40.0" prefWidth="509.0" promptText="Фильтр" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="15.0" />
+    </children>
+    <stylesheets>
+        <URL value="@../medico/medico.css" />
+    </stylesheets>
+</AnchorPane>
