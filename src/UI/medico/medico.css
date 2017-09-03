@@ -1,0 +1,41 @@
+.animated-button {
+    -fx-pref-width: 50px;
+    -fx-pref-height: 50px;
+    -fx-background-color: #44B449;
+    -fx-background-radius: 50px;
+    -fx-text-fill: WHITE;
+    -fx-border-color:WHITE;
+    -fx-border-radius: 50px;
+    -fx-border-width: 4px;
+}
+
+.animated-button:hover {
+    -fx-pref-width: 50px;
+    -fx-pref-height: 50px;
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 50px;
+    -fx-text-fill: WHITE;
+    -fx-border-color:WHITE;
+    -fx-border-radius: 50px;
+    -fx-border-width: 4px;
+}
+
+.table {
+    -fx-text-fill: WHITE;
+}
+
+.animated-action-button {
+    -fx-background-color: #2196F3;
+}
+
+.animated-edit-button {
+    -fx-background-color: #FFC400;
+}
+
+.animated-delete-button {
+    -fx-background-color: #D50000;
+}
+
+.animated-new-button {
+    -fx-background-color: #2E7D32;
+}
